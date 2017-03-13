@@ -1,0 +1,30 @@
+{% load bootstrap3 %}
+<html>
+<head>
+	<title>TEST</title>
+
+</head>
+<body>
+<table>
+
+	<tr>
+    {%for title in lsofmovie%}
+    	<td class="spaceUnder">{{title}}</td>
+    {%endfor%}
+    </tr>
+    
+    {% for key,value in context.items%}
+    <tr>
+    	<td>{{key}}</td>
+    	{% for rating in value.items%}
+    	<td>{{rating.1}}</td>
+    	
+    	{%endfor%}
+	</tr>
+    {%endfor%}
+	
+</table>
+</body>
+
+</html>
+
